@@ -1,0 +1,30 @@
+/*  Find factorial of a given number where n! = n * n-1 * n-2 .....* 1.
+Input: First-line consists of a single integer denoting n.
+Constraints
+0 <= n <= 20
+Output: Output is a single line containing factorial(n)
+Example:
+Sample Input
+5
+Sample Output
+120
+Explanation
+5! = 5*4*3*2*1 = 120.
+
+Logic: if we take fact as int we can give input maximum upto 20, after that it'll show negative value. for 21 it'll show output negative value. and after 33 it'll
+show 0 as output. because it considers the number as long number. that's why we have to use long as fact for getting positive output.  
+*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    long fact=1;
+	    for(int i=1;i<=n;i++){
+	        fact*=i;
+	    }
+		System.out.println(fact);
+	}
+}
