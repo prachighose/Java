@@ -1,0 +1,33 @@
+/* Write a program that prompts the user to input an integer and then outputs the number with the digits reversed. 
+For example, if the input is 12345, the output should be 54321. */
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num = sc.nextInt();
+	    
+	   // Using For Loop
+	    int reverse =0;
+	        
+	    for(int temp = num; temp>0; temp/=10){
+	        int digit = temp%10;
+	        reverse = reverse*10+digit;
+	       
+	    }
+		System.out.println(reverse);
+		
+		
+		//Using While Loop
+		/* int temp = num;
+		int digit = 0;
+		int reverse = 0;
+		while(temp>0){
+		    digit=temp%10;
+		    reverse=reverse*10+digit;
+		    temp/=10;
+		}
+		System.out.println(reverse); */
+	}
+}
