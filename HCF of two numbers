@@ -1,0 +1,25 @@
+/* Write a program that finds out HCF of two numbers a and b.
+What Is HCF? HCF or Highest Common Factor is the greatest common divisor between two numbers.
+For example: Let there be two arbitrary numbers such as 75 and 90.
+75 = 3 * 5 * 5
+90 = 2 * 3 * 3 * 5
+Common Divisor = 3 * 5 = 15
+Here, the HCF of the three given numbers would be 15 since it divides every given number without leaving a fraction behind. */
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int a = sc.nextInt();
+	    int b = sc.nextInt();
+	   int hcf = 0;
+	   //int min = Math.min(a,b); (optional)
+		for(int i=1; i<=b; i++){
+		    if(a%i==0 && b%i==0){
+		        hcf=i;
+		    }
+		}
+		    System.out.println(hcf);
+	}
+}
