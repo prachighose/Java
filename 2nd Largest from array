@@ -1,0 +1,15 @@
+/* Find the 2nd largest element in an unsorted array.
+Input
+First line contains a single integer N.
+Second line consists of N integers of the array.
+Constraints:
+2 <= N <= 10^5
+-10^5<= N <= 10^5
+Output
+Print the second largest number in new line.
+Example
+Input:
+6
+3 2 1 5 6 4
+Output:
+5 */
