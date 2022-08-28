@@ -1,0 +1,38 @@
+Given a string S consisting only 0s and 1s, find the last index of the 1 present in it.
+Expected Time Complexity: O(N)
+Expected Auxiliary Space: O(1)
+
+Input
+The only line contains a string S.
+Constraints
+1 <= |S| <= 10^6
+S = {0,1}
+Output
+Print the last index of 1. If 1 is not present in the string, print -1.
+
+Example
+Sample Input
+00001
+Sample Output
+4
+Explanation
+Last index of  1 in given string is 4.
+
+import java.util.*;
+public class Main
+{
+    public static int lastindex(String s){
+        int lastidx=-1;
+        for(int i=0; i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                lastidx=i;
+            }
+        }
+        return lastidx;
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    String s = sc.next();
+	    System.out.println(lastindex(s));
+	}
+}
