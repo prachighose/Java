@@ -1,0 +1,29 @@
+Given a number n. find the factorial of that number n.
+Input Format : The first line will contain a number n whose factorial has to be found out.
+Output Format : In the output you need to print an ans denoting the factorial of that number.
+Note :
+Make sure its also satifies long range integers
+Constraint : 1<=n<=15
+Sample Input 1 : 5
+Sample Output 1 : 120
+
+Sample Input 2: 7
+Sample Output 2: 5040
+
+import java.util.*;
+public class Main
+{
+  public static long fact(int n){
+    long facto = 1;
+    for(int i=1; i<=n; i++){
+      facto*=i;
+    }
+    return facto;
+  }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      System.out.println(fact(n));
+	}
+}
