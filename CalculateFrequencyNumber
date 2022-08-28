@@ -1,0 +1,28 @@
+Given a number N and a digit D. Write a program to find how many times the digit D appears in the number N.
+Input Format The only line contains two integers n and d.
+** Output Format ** Print the frequency of the digit d in number n.
+
+Example 1111221 1 Output 5
+
+Constraints 1 <= N <= 10^9 0 <= D <= 9
+
+import java.util.*;
+public class Main
+{
+    public static int count(int n, int d){
+        int counte = 0;
+        for(int i=n; i>0; i/=10){
+            if(i%10==d){
+                counte+=1;
+            }
+        }
+        return counte;
+    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int d = sc.nextInt();
+// 		int ans = count(n,d);
+		System.out.println(count(n,d));
+	}
+}
