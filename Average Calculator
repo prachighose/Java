@@ -1,0 +1,36 @@
+Given the marks of N students, your task is to calculate the average of the marks obtained.
+
+Input
+The first number in the input line is the number of students. The next N space-separated integers are the marks of the students.
+
+Constraints:-
+1 <= N <= 1000
+1 <= marks <= 1000
+Output
+Print the floor of the average of marks obtained.
+
+Example:
+Input: 5 2 2 2 2 2 Output: 2
+
+Input: 3 31 32 33
+
+Output: 32
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int [] arr = new int[n];
+		for(int i=0; i<n; i++){
+		    arr[i]=sc.nextInt();
+		}
+		int sum = 0;
+		for(int i=0; i<n; i++){
+		        sum+=arr[i];
+		    }
+		int avg = sum/n;
+		System.out.println(avg);
+	}
+}
