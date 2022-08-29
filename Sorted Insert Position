@@ -1,0 +1,50 @@
+Given a sorted array A and a target value B, return the index if the target is found. If not, print the index where it would be if it were inserted in order.
+You may assume no duplicates in the array.
+Problem Constraints: 
+1 <= |A| <= 100000
+1 <= B <= 10^9
+Input Format
+First line given is an integer N, denoting the size of array A. Second line contains N integers - the elements of array A. Third line given is integer B.
+Output Format Print an integer, the answer to the problem.
+
+Input 1: 
+4 
+1 3 5 6 
+5
+Output 1: 
+2
+Explanation 1: 5 is found at index 2.
+
+Input 2: 
+4 
+1 3 5 6 
+2'
+Output 2:
+1
+Explanation 2: 2 will be inserted ar index 1.
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner (System.in);
+      int N = sc.nextInt();
+      int [] arr = new int[N];
+      for(int i = 0; i<N; i++){
+        arr[i]=sc.nextInt();
+      }
+      int B = sc.nextInt();
+      int index = 0;
+      for(int i=0; i<N; i++){
+          if(arr[i]==B){
+            index=i;
+              break;
+          }
+         else if(arr[i]<B){
+            index=i+1;
+          }
+      }
+      System.out.println(index);
+	}
+}
